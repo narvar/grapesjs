@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["grapesjs"] = factory();
+		exports["narvar-grapesjs"] = factory();
 	else
-		root["grapesjs"] = factory();
+		root["narvar-grapesjs"] = factory();
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -24334,7 +24334,7 @@ __webpack_require__.r(__webpack_exports__);
       if (component) {
         var coll = component.collection;
         component.trigger('component:destroy');
-        coll && coll.remove(component);
+        coll && coll.remove(component.cid);
       }
     });
     return components;
@@ -36228,7 +36228,7 @@ var defaultConfig = {
   editors: editors,
   plugins: plugins,
   // Will be replaced on build
-  version: '0.15.8',
+  version: '0.15.9',
 
   /**
    * Initialize the editor with passed options
